@@ -1,7 +1,3 @@
-return {
-  'stevearc/overseer.nvim',
-  opts = {},
-  config = function()
-    require('overseer').setup {}
-  end,
+vim.pack.add {
+  { src = 'https://github.com/stevearc/overseer.nvim' },
 }
