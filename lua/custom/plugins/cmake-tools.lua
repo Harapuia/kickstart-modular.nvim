@@ -5,7 +5,6 @@ vim.pack.add {
   { src = "https://github.com/Civitasv/cmake-tools.nvim" },
   { src = "https://github.com/nvim-lua/plenary.nvim" },
 }
-
 require("cmake-tools").setup({
   cmake_build_directory = "build",
 
@@ -22,5 +21,11 @@ require("cmake-tools").setup({
     target = function()
       return vim.loop.cwd()
     end,
+  },
+  cmake_ctest_args = {
+    "--parallel",
+  },
+  cmake_executor = {
+    name = "quickfix",
   },
 })
